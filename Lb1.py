@@ -1,3 +1,7 @@
+'''
+Реализовать перцептрон и механизм его обучения. Обучить логическим функциям "и", "или", "не".
+'''
+
 class Perceptron:
     def __init__(self, input_size, learning_rate=0.1, epochs=20):
         self.weights = [0.0] * input_size
