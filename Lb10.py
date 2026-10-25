@@ -15,9 +15,8 @@ NUM_PREDATORS = 5
 
 class Perceptron:
     def __init__(self, weights=None):
-        # Входы: [расстояние_до_еды, угол_к_еде, расстояние_до_угрозы, угол_к_угрозе, bias(1.0)]
         self.input_size = 5
-        self.output_size = 2 # Выходы: [ускорение, поворот]
+        self.output_size = 2 
         
         if weights:
             self.weights = weights
@@ -45,7 +44,7 @@ class Agent:
         self.x = x
         self.y = y
         self.angle = random.uniform(0, 2 * math.pi)
-        self.type = agent_type # 'herbivore' или 'predator'
+        self.type = agent_type
         self.energy = 150.0
         self.brain = brain if brain else Perceptron()
         self.radius = 5 if agent_type == 'herbivore' else 7
